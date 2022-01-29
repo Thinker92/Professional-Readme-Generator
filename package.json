@@ -9,7 +9,7 @@
   "author": "Vilson Apostolovski II",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^6.3.1"
+    "inquirer": "^8.2.0"
   },
   "repository": {
     "type": "git",
