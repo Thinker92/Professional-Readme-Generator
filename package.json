@@ -1,14 +1,26 @@
 {
   "name": "static-site",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node.js application to generate a README",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Vilson Apostolovski II",
   "license": "ISC",
   "dependencies": {
     "inquirer": "^6.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thinker92/Professional-Readme-Generator.git"
+  },
+  "keywords": [
+    "node",
+    "README"
+  ],
+  "bugs": {
+    "url": "https://github.com/Thinker92/Professional-Readme-Generator/issues"
+  },
+  "homepage": "https://github.com/Thinker92/Professional-Readme-Generator#readme"
 }
