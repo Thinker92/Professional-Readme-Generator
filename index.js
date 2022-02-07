@@ -42,7 +42,7 @@ const questions = () =>
     {
       type: "input",
       name: "installation",
-      message: "Provide any installation instructions:",
+      message: "What command should be used to install dependancies?",
     },
     {
       type: "input",
@@ -57,8 +57,13 @@ const questions = () =>
     },
     {
       type: "input",
-      name: "testInstructions",
-      message: "Provide example on how to run test:",
+      name: "githubURL",
+      message: "Provide a link to the GitHub Repository:",
+    },
+    {
+      type: "input",
+      name: "liveGithubURL",
+      message: "Provide a link to the projects GitHub page or live site URL:",
     },
   ]);
 
