@@ -1,10 +1,7 @@
-// TODO: Include packages needed for this application
-
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 
-// TODO: Create an array of questions for user input
 const questions = () =>
   inquirer.prompt([
     {
@@ -15,7 +12,7 @@ const questions = () =>
     {
       type: "input",
       name: "username",
-      message: "What is your github username?",
+      message: "What is your GitHub username?",
     },
     {
       type: "input",
@@ -42,12 +39,19 @@ const questions = () =>
     {
       type: "input",
       name: "installation",
-      message: "What command should be used to install dependancies?",
+      message:
+        "Provide what command should be used to install dependancies and any additonal installation instructions:",
     },
     {
       type: "input",
+      name: "tests",
+      message: "What command should be run to run tests?",
+    },
+
+    {
+      type: "input",
       name: "usage",
-      message: "Provide usage information aand/or examples for use:",
+      message: "Provide usage information and/or examples for use:",
     },
     {
       type: "input",
@@ -59,11 +63,6 @@ const questions = () =>
       type: "input",
       name: "githubURL",
       message: "Provide a link to the GitHub Repository:",
-    },
-    {
-      type: "input",
-      name: "liveGithubURL",
-      message: "Provide a link to the projects GitHub page or live site URL:",
     },
   ]);
 
