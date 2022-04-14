@@ -68,21 +68,21 @@ const questions = () =>
       },
     ]);
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(filename, data) {
   fs.writeFile(filename, data, (err) => {
     if (err) {
       throw err;
-    console.log("Writing README file was Successful!")
+    console.log("Writing README file was successful!")
     }
   })
 }
 
-// TODO: Create a function to initialize app
+// Function to initialize application
 function init() {
   questions().then(function(userInput) {
     console.log(userInput)
-    writeToFile("README.md", generateMarkdown(userInput))
+    writeToFile("README1.md", generateMarkdown(userInput))
   });
 }
 
