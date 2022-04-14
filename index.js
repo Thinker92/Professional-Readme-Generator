@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const util = require("util");
+const generateMarkdown = require("./utils/generateMarkdown.js");
+
 
 const questions = () =>
   inquirer
@@ -41,7 +42,7 @@ const questions = () =>
         type: "input",
         name: "installation",
         message:
-          "Provide what command should be used to install dependancies and any additonal installation instructions:",
+          "Provide what command should be used to install dependencies and any additional installation instructions:",
       },
       {
         type: "input",
@@ -65,24 +66,24 @@ const questions = () =>
         name: "githubURL",
         message: "Provide a link to the GitHub Repository:",
       },
-    ])
-    .then((answers) => {
-      console.log(answers);
-      fs.writeFile(
-        answers.title + ".json",
-        JSON.stringify(answers, null, "\t"),
-        (err) => {
-          err ? console.error(err) : console.log("Success!");
-        }
-      );
-    });
+    ]);
 
 // TODO: Create a function to write README file
-const writeToFile = util.promisify(fs.writeFile);
+function writeToFile(filename, data) {
+  fs.writeFile(filename, data, (err) => {
+    if (err) {
+      throw err;
+    console.log("Writing README file was Successful!")
+    }
+  })
+}
 
 // TODO: Create a function to initialize app
 function init() {
-  questions();
+  questions().then(function(userInput) {
+    console.log(userInput)
+    writeToFile("README.md", generateMarkdown(userInput))
+  });
 }
 
 // Function call to initialize app

@@ -4,7 +4,7 @@
   "description": "Node.js application to generate a README",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index"
   },
   "author": "Vilson Apostolovski II",
   "license": "ISC",
