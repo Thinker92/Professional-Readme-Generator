@@ -22,6 +22,10 @@
   -Run "node index" to start application
   -Answer prompts that follow
   -If successful, a "README.md" file will be generated
+  
+  Here is a video walkthrough of how to use the application:
+  
+  [Walkthrough Video](Readme%20Generator%20Demo.mp4)
 
   ## License:
   MIT
