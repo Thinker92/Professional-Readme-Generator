@@ -23,17 +23,21 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## License:
-  ${data.licensing}
+  ${data.license}
 
   ## Contribution:
   ${data.contribution}
+  
 
   ## Testing:
-  ${data.testing}
+  ${data.tests}
 
   ## Additional Information:
-  - GitHub: [${data.github}](https://github.com/${data.github})
+  - GitHub: [${data.username}](https://github.com/${data.username})
   - Email: ${data.email}
+
+  ## Author
+  ${data.author}
 `;
 }
 
